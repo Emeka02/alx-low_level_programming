@@ -1,25 +1,43 @@
 #include "main.h"
 
 /**
- * times_table -  a function that prints the 9 times table, starting with 0
- * rone = row, cone = column, d = digits of current result
- *
- * Return: int
- */
-int print_last_digit(int n)
+* times_table - function that prints times table for 9
+*
+*/
+void times_table(void)
 {
-	int last_digit;
+	int x = 0; /* factor */
+	int y; /* count  */
+	int z; /* computed value */
 
-	if (n < 0)
+	while (x < 10)
 	{
-		last_digit = -1 * (n % 10);
-		_putchar(last_digit + 48);
-		return (last_digit);
-	}
-	else
-	{
-		last_digit = n % 10;
-		_putchar(last_digit + 48);
-		return (last_digit);
+		y = 0;
+		while (y < 10)
+		{
+			z = x * y;
+			if (z > 9)
+			{
+				_putchar(z / 10 + '0')
+				_putchar(z % 10 + '0');
+			}
+			else if (y != 0)
+			{
+				_putchar(' ');
+				_putchar(z + '0');
+			}
+			else
+			{
+				_putchar(z + '0');
+			}
+			if (y != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			y++;
+		}
+		_putchar('\n');
+		x++;
 	}
 }
