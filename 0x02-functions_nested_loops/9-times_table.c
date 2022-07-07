@@ -2,7 +2,9 @@
 
 /**
 * * times_table - function that prints times table for 9
+* * return: void
 */
+
 void times_table(void)
 {
 	int x = 0; /* factor */
