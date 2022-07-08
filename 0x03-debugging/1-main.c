@@ -2,6 +2,7 @@
 
 /**
 * main - causes an infinite loop
+* don’t delete it!
 * Return: 0
 */
 
