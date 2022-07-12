@@ -31,5 +31,5 @@ int main(void)
 		count++;
 	}
 
-	return(0);
+	return (0);
 }
