@@ -1,0 +1,18 @@
+/**
+* swap_int - swaps the valws of two integers
+* usig two input parameters
+*
+* @a: input parameter 1
+* @a: input parameter 2
+*
+* Return: Nothing
+*/
+
+void swap_int(int *a, int *b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
