@@ -1,8 +1,7 @@
 /**
 *_strcpy - copies string to given destination
 * @dest: pointer parameter to copied it
-* @src: pointer parameter copied from it.
-* 
+* @src: pointer parameter copied from it. 
 * Return: char
 */
 
