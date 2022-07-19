@@ -2,6 +2,7 @@
 /**
 *_memcpy - copies n bytes from src memory area  to dest memory area
 *@dest: dest parameter
+*@src: src parameter
 *@n: number of bytes to be copied
 *Return: char *
 */
