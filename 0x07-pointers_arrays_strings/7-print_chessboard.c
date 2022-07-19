@@ -1,31 +1,18 @@
 #include "main.h"
 /**
-*_strstr - ocates a substring.
-*@haystack: stack parameter
-*@needle: needle parameter
-*Return: char * || NULL
+*print_chessboard - prints the chessboard.
+*@a: array paremmeter
+*returns: void
 */
 
-char *_strstr(char *haystack, char *needle)
+void print_chessboard(char (*a)[8])
 {
-	int i;
+	int i, j;
 
-	if (*needle == 0)
-		return (haystack);
-
-	while (*haystack)
+	for (i = 0; i < 8; i++)
 	{
-		i = 0;
-
-		if (haystack[i] == needle[i])
-		{
-			do {
-				if (needle[i + 1] == '\0')
-					return (haystack);
-				i++;
-			} while (haystack[i] == needle[i]);
-		}
-		haystack++;
+		for (j = 0; j < 8; j++)
+			_putchar(a[i][j]);
+		_putchar('\n');
 	}
-	return (NULL);
 }
