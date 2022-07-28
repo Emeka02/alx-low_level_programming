@@ -3,7 +3,7 @@
 * argstostr - a function that concatenates all the arguments of your program
 *@ac: count of args passed to the function
 *@av:array of arguments
-
+*
 *Return: pointer to the new string
 */
 
@@ -16,32 +16,34 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	while (ac--)
-		sum += (length(av[ac]) + 1);
+		sum += (len(av[ac]) + 1);
 	new_string = (char *) malloc(sum + 1);
 
 	if (new_string != NULL)
 	{
-	for (j = 0; av[k][j] != '\0'; j++)
-	new_string[j + temp] = av[k][j];
-new_string[temp + j] = '\n';
-temp += (j + 1);
-k++;
+		while (k < i)
+		{
+			for (j = 0; av[k][j] != '\0'; j++)
+				new_string[j + temp] = av[k][j];
+			new_string[temp + j] = '\n';
+			temp += (j + 1);
+			k++;
+		}
+		new_string[temp] = '\0';
 	}
-	new_string[temp] = '\0';
-}
-else
-{
-	return (NULL);
-}
-return (new_string);
+	else
+	{
+		return (NULL);
+	}
+	return (new_string);
 }
 
-/**
-*length - returns length of a given string
-*@str: counted string
-*Return: int
+/*
+*len - returns length of str
+*@str: string counted
+*Return: returns the length
 */
-int length(char *str)
+int len(char *str)
 {
 	int len = 0;
 
@@ -50,5 +52,5 @@ int length(char *str)
 		while (str[len])
 			len++;
 	}
-	return (len)
-	}
+	return (len);
+}
