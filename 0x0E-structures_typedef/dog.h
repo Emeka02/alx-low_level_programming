@@ -3,6 +3,7 @@
 
 /**
  * struct dog - Dog Structure
+ * @name: name
  * @age: age
  * @owner:  owner
  * Description: Dog Structure
