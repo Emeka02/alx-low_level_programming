@@ -27,7 +27,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 
 		cutie_dog->name = malloc(sizeof(char) * name_l);
+
 		if (cutie_dog->name == NULL)
+		{
+			free(cutie_dog);
+			return (NULL);
+		}
+
+		cutie_dog->owner = malloc(sizeof(char) * own_l);
+
+		if (cutie_dog->owner == NULL)
 		{
 			free(cutie_dog->name);
 			free(cutie_dog);
@@ -70,9 +79,14 @@ int _strlen(char *s)
 char *_strcpy(char *dest, char *src)
 {
 	int i;
+
 	for (i = 0; src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
-
-		return (dest);
 	}
+
+	dest[i++] = '\0';
+
+
+	return (dest);
+}
